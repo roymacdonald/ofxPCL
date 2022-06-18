@@ -63,36 +63,43 @@ common:
 # 	ADDON_LIBS += libs/opencv/lib/emscripten/libzlib.a
 
 osx:
-	# osx/iOS only, any framework that should be included in the project
-# 	ADDON_FRAMEWORKS = AssetsLibrary
- ADDON_INCLUDES = /opt/homebrew/Cellar/boost/1.78.0_1/include 
- ADDON_INCLUDES += /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3 
- ADDON_INCLUDES += /opt/homebrew/Cellar/pcl/1.12.1_2/include/pcl-1.12 
- ADDON_INCLUDES += /opt/homebrew/Cellar/flann/1.9.1_13/include
+ 
+ # osx/iOS only, any framework that should be included in the project
+ # 	ADDON_FRAMEWORKS = AssetsLibrary
+ #  ADDON_INCLUDES = /opt/homebrew/Cellar/boost/1.78.0_1/include 
+ #  ADDON_INCLUDES += /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3 
+ #  ADDON_INCLUDES += /opt/homebrew/Cellar/pcl/1.12.1_2/include/pcl-1.12 
+ #  ADDON_INCLUDES += /opt/homebrew/Cellar/flann/1.9.1_13/include
 
 
-   ADDON_LIBS = /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_common.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_features.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_filters.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_io_ply.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_io.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_kdtree.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_keypoints.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_ml.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_octree.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_outofcore.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_people.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_recognition.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_registration.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_sample_consensus.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_search.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_segmentation.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_simulation_io.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_simulation.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_stereo.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_surface.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_tracking.1.12.1.dylib
-   ADDON_LIBS += /opt/homebrew/Cellar/pcl/1.12.1_2/lib/libpcl_visualization.1.12.1.dylib
+ ADDON_INCLUDES =  /usr/local/include
+ ADDON_INCLUDES += /usr/local/include/eigen3 
+ ADDON_INCLUDES += /usr/local/include/pcl-1.12 
+
+
+    ADDON_LIBS = /usr/local/lib/libpcl_common.dylib                                     
+    ADDON_LIBS += /usr/local/lib/libpcl_features.dylib                                   
+    ADDON_LIBS += /usr/local/lib/libpcl_filters.dylib                                    
+    ADDON_LIBS += /usr/local/lib/libpcl_io.dylib                                         
+    ADDON_LIBS += /usr/local/lib/libpcl_io_ply.dylib                                     
+    ADDON_LIBS += /usr/local/lib/libpcl_kdtree.dylib                                     
+    ADDON_LIBS += /usr/local/lib/libpcl_keypoints.dylib
+    ADDON_LIBS += /usr/local/lib/libpcl_ml.dylib
+    ADDON_LIBS += /usr/local/lib/libpcl_octree.dylib
+    ADDON_LIBS += /usr/local/lib/libpcl_outofcore.dylib
+    ADDON_LIBS += /usr/local/lib/libpcl_people.dylib
+    ADDON_LIBS += /usr/local/lib/libpcl_recognition.dylib
+    ADDON_LIBS += /usr/local/lib/libpcl_registration.dylib
+    ADDON_LIBS += /usr/local/lib/libpcl_sample_consensus.dylib
+    ADDON_LIBS += /usr/local/lib/libpcl_search.dylib
+    ADDON_LIBS += /usr/local/lib/libpcl_segmentation.dylib
+    ADDON_LIBS += /usr/local/lib/libpcl_simulation.dylib
+    ADDON_LIBS += /usr/local/lib/libpcl_simulation_io.dylib
+    ADDON_LIBS += /usr/local/lib/libpcl_stereo.dylib
+    ADDON_LIBS += /usr/local/lib/libpcl_surface.dylib
+    ADDON_LIBS += /usr/local/lib/libpcl_tracking.dylib
+
+
 
   ADDON_LIBS_EXCLUDE = ../../../libs/boost/lib/osx/boost_system.a
   ADDON_LIBS_EXCLUDE +=  ../../../libs/boost/lib/osx/boost_filesystem.a
