@@ -22,3 +22,7 @@ brew install pcl
     * LIB_BOOST_SYSTEM
 
 * Compile!
+
+## M1 Macs
+When using a mac computer with M1 processor, make sure you modify the addon_config.mk file so the route to the PCL files are correct.
+This is because brew uses a different filepath on M1 macs.
