@@ -74,7 +74,7 @@ osx:
 
  ADDON_INCLUDES =  /usr/local/include
  ADDON_INCLUDES += /usr/local/include/eigen3 
- ADDON_INCLUDES += /usr/local/include/pcl-1.12 
+ ADDON_INCLUDES += /usr/local/include/pcl-1.13
 
 
     ADDON_LIBS = /usr/local/lib/libpcl_common.dylib                                     
